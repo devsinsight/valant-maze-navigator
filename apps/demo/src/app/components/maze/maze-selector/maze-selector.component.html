@@ -1,0 +1,10 @@
+<div class="maze-selector">
+    <h3>Select a Maze</h3>
+    <ul *ngIf="availableMazes.length > 0">
+      <li *ngFor="let mazeId of availableMazes" (click)="selectMaze(mazeId)">
+        {{ mazeId }}
+      </li>
+    </ul>
+    <p *ngIf="availableMazes.length === 0">No mazes available. Please upload a maze first.</p>
+  </div>
+  

@@ -1,0 +1,27 @@
+.maze-selector {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .maze-selector ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .maze-selector li {
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .maze-selector li:hover {
+    background-color: #ddd;
+  }
+  
+  .maze-selector li:active {
+    background-color: #bbb;
+  }
+  

@@ -1,0 +1,23 @@
+<div class="maze-navigation"  #mazeContainer>
+  <div class="maze-grid">
+    <div *ngFor="let row of grid; let y = index" class="maze-row">
+      <span *ngFor="let cell of row; let x = index"
+            [ngClass]="{
+              'current': currentPosition?.x === x && currentPosition?.y === y && cell !== 'S' && cell !== 'E',
+              'wall': cell === 'X',
+              'start': cell === 'S',
+              'end': cell === 'E',
+              'path': cell === 'O'
+            }">{{ cell }}</span>
+    </div>
+  </div>
+  <div class="controls">
+    <button *ngFor="let movement of movements" [attr.id]="movement" (click)="move(movement)">
+      <span *ngIf="movement == 'Up'">↑</span>
+      <span *ngIf="movement == 'Down'">↓</span>
+      <span *ngIf="movement == 'Left'">←</span>
+      <span *ngIf="movement == 'Right'">→</span>
+    </button>
+  </div>
+
+</div>
