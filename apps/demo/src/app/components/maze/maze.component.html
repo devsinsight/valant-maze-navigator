@@ -1,0 +1,10 @@
+<div class="maze-app">
+    <app-maze-upload (mazeUploaded)="onMazeUploaded($event)"></app-maze-upload>
+    <app-maze-selector [availableMazes]="availableMazes" (mazeSelected)="onMazeSelected($event)"></app-maze-selector>
+    <app-maze-navigator *ngIf="selectedMazeId && grid.length > 0" 
+                        [mazeId]="selectedMazeId" 
+                        [grid]="grid" 
+                        [startPosition]="startPosition">
+    </app-maze-navigator>
+  </div>
+  

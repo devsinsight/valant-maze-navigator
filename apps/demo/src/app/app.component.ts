@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
   private getStuff(): void {
     this.stuffService.getStuff().subscribe({
       next: (response: string[]) => {
+        this.logger.log("data: ", response)
         this.data = response;
       },
       error: (error) => {
